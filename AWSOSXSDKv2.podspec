@@ -1,0 +1,64 @@
+Pod::Spec.new do |s|
+
+  s.name         = 'AWSOSXSDKv2'
+  s.version      = '2.1.1'
+  s.summary      = 'Amazon Web Services SDK for OSX.'
+
+  s.description  = 'The AWS SDK for OSX provides a library, code samples, and documentation for developers to build connected mobile applications using AWS.'
+
+  s.homepage     = 'http://aws.amazon.com/sdkforios'
+  s.license      = 'Apache License, Version 2.0'
+  s.author       = { 'Amazon Web Services' => 'amazonwebservices' }
+  s.platform     = :osx, '10.9'
+  s.source       = { :git => 'https://github.com/jodyhagins/aws-sdk-ios.git',
+                     :tag => 'osx'}
+  s.requires_arc = true
+
+  s.subspec 'AWSCore' do |aws|
+    aws.dependency 'AWSCore', '2.1.1'
+  end
+
+  s.subspec 'AutoScaling' do |autoscaling|
+  	autoscaling.dependency 'AWSAutoScaling', '2.1.1'
+  end
+
+  s.subspec 'CloudWatch' do |cloudwatch|
+  	cloudwatch.dependency 'AWSCloudWatch', '2.1.1'
+  end
+
+  s.subspec 'DynamoDB' do |ddb|
+  	ddb.dependency 'AWSDynamoDB', '2.1.1'
+  end
+
+  s.subspec 'EC2' do |ec2|
+  	ec2.dependency 'AWSEC2', '2.1.1'
+  end
+
+  s.subspec 'ElasticLoadBalancing' do |elasticloadbalancing|
+  	elasticloadbalancing.dependency 'AWSElasticLoadBalancing', '2.1.1'
+  end
+
+  s.subspec 'Kinesis' do |kinesis|
+  	kinesis.dependency 'AWSKinesis', '2.1.1'
+  end
+
+  s.subspec 'S3' do |s3|
+  	s3.dependency 'AWSS3', '2.1.1'
+  end
+
+  s.subspec 'SES' do |ses|
+  	ses.dependency 'AWSSES', '2.1.1'
+  end
+
+  s.subspec 'SimpleDB' do |simpledb|
+  	simpledb.dependency 'AWSSimpleDB', '2.1.1'
+  end
+
+  s.subspec 'SNS' do |sns|
+  	sns.dependency 'AWSSNS', '2.1.1'
+  end
+
+  s.subspec 'SQS' do |sqs|
+  	sqs.dependency 'AWSSQS', '2.1.1'
+  end
+end
